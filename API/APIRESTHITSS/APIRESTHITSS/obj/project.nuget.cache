@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bee8x6/7RhS26XcuudUZ+l1ceFlUT2LB4AT4eY6BTDowDwL8sHAjapLdwYAZNqHjvYXtxJVEpNhZrS9rVJsPaw==",
+  "success": true,
+  "projectFilePath": "E:\\JORO\\Personales\\VisualStudio\\GlobalHitIss\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joro.ROMERODYA\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\joro.ROMERODYA\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\joro.ROMERODYA\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\joro.ROMERODYA\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\joro.ROMERODYA\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\joro.ROMERODYA\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
