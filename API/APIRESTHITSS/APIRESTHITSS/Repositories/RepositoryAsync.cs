@@ -1,6 +1,7 @@
 ﻿using APIRESTHITSS.Interfaces;
 using APIRESTHITSS.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace APIRESTHITSS.Repositories
     public class RepositoryAsync<T> : IRepositoryAsync<T> where T : class
     {
         private readonly GLOBALHITSSContext _dbContext;
-
+        
         public RepositoryAsync(GLOBALHITSSContext dbContext)
         {
             _dbContext = dbContext;

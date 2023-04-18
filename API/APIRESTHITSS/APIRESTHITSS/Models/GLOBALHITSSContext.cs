@@ -11,6 +11,10 @@ namespace APIRESTHITSS.Models
         public GLOBALHITSSContext()
         {
         }
+        protected GLOBALHITSSContext(DbContextOptions contextOptions)
+        : base(contextOptions)
+        {
+        }
 
         public GLOBALHITSSContext(DbContextOptions<GLOBALHITSSContext> options)
             : base(options)

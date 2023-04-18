@@ -1,7 +1,12 @@
+using APIRESTHITSS.Extensions;
+using APIRESTHITSS.Interfaces;
+using APIRESTHITSS.Models;
+using APIRESTHITSS.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +33,11 @@ namespace APIRESTHITSS
         {
 
             services.AddControllers();
+            services.AddTransient<GLOBALHITSSContext>();
+            //services.AddSingleton<GLOBALHITSSContext>(s => new GLOBALHITSSContext());
+            //services.AddDbContext<GLOBALHITSSContext>();
+            services.AddTransient(typeof(IRepositoryAsync<>), typeof(RepositoryAsync<>));
+            services.AddTransient<ICustomerRespository, CustomerRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "APIRESTHITSS", Version = "v1" });
