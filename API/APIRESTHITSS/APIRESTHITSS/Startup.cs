@@ -27,13 +27,23 @@ namespace APIRESTHITSS
         }
 
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("*", "localhost").AllowAnyHeader()
+                                                  .AllowAnyMethod();
+                                  });
+            });
             services.AddControllers();
-            services.AddTransient<GLOBALHITSSContext>();
+            services.AddTransient<GLOBALHITSSContext>(s=> new GLOBALHITSSContext(Configuration.GetConnectionString("RegistroConnection")));
             //services.AddSingleton<GLOBALHITSSContext>(s => new GLOBALHITSSContext());
             //services.AddDbContext<GLOBALHITSSContext>();
             services.AddTransient(typeof(IRepositoryAsync<>), typeof(RepositoryAsync<>));
@@ -59,6 +69,7 @@ namespace APIRESTHITSS
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors(cor => cor.AllowAnyHeader().WithOrigins("http://localhost:5173/", "http://localhost:5173", "http://localhost:/*", "http://localhost:5173", "http://localhost:8082/", "http://localhost:8082", "http://localhost:8086/", "http://localhost:8086"));
 
             app.UseEndpoints(endpoints =>
             {

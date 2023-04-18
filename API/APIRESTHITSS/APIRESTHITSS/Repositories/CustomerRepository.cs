@@ -25,10 +25,9 @@ namespace APIRESTHITSS.Repositories
         {
             await _repository.UpdateAsync(customer);
         }
-        public async Task<Customer> GetByCIAsync(string ciCustomer)
+        public async Task<List<Customer>> GetByCIAsync(string ciCustomer)
         {
-            return await _dbContext.Customers.Where(p => p.Ci == ciCustomer).FirstAsync();
-
+            return await _dbContext.Customers.Where(p => p.Ci.StartsWith(ciCustomer)).ToListAsync();
         }
         public async Task<List<Customer>> GetListAsync()
         {

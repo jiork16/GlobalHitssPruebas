@@ -8,7 +8,7 @@ namespace APIRESTHITSS.Interfaces
     {
         Task<int> InsertAsync(Customer customer);
         Task UpdateAsync(Customer customer);
-        Task<Customer> GetByCIAsync(string ciCustomer);
-        Task<List<Customer>> GetListAsync();       
+        Task<List<Customer>> GetByCIAsync(string ciCustomer);
+        Task<List<Customer>> GetListAsync();
     }
 }
