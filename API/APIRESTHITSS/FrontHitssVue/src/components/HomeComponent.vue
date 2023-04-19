@@ -16,7 +16,7 @@
       <template v-for="item in customers" :key="item.id">
         <tr>
           <th scope="row">{{ item.Id }}</th>
-          <td>{{ item.id }}</td>
+          <td>{{ item.ci }}</td>
           <td>{{ item.firstName }}</td>
           <td>{{ item.lastName }}</td>
           <td>{{ format_date(item.dateBirth)  }}</td>
@@ -43,25 +43,10 @@
       components: {  
       },
       props: {
-        refresh_data: {
-          type: Boolean,
-          required: false,
-          default: false
-        },
         refresh_data_filter: {
           type: String,
           required: false,
           default: null
-        },
-        is_report: {
-          type: Boolean,
-          required: false,
-          default: false
-        },
-        form_search: {
-          type: Object,
-          required: false,
-          default: () => {}
         }
       },
       data: () => ({
@@ -71,17 +56,9 @@
       this.getListcustomers ();
     },
     watch: {
-      refresh_data: {
-        handler: function(newVal) {
-          if (newVal === true) {
-            this.getListcustomers();
-          }      
-        }
-      },
       refresh_data_filter: {
         handler: function(newVal) {
           if (newVal.length > 0) {
-            console.log(this.form_search)
             this.getListcustomersFilter(newVal);
           }else{
             this.getListcustomers();
@@ -90,10 +67,6 @@
       }
     },
       methods: {
-        setDatainput(item) {
-          console.log(item)
-          this.$emit("setDatainputParent",item)
-        },
         format_date(value){
           if (value) {
             return moment(String(value)).format('DD/MM/YYYY')
@@ -102,20 +75,20 @@
         getListcustomers() {
           axiosInstance.get(import.meta.env.VITE_API_URL+"Customer").then((response) => {
             this.customers=response.data.value;
-            console.log(this.customers);
-            console.log(response.data.value);
+            //console.log(this.customers);
+            //console.log(response.data.value);
           }).catch((error) =>{
             console.log(error.response)
 
           });
         },
         getListcustomersFilter(CI) {
-          axiosInstance.post(import.meta.env.VITE_API_URL+"Customer/getByCI",{CI: CI}).then((response) => {
-            this.customers=response.value;
-            console.log(response.value);
+          axiosInstance.get(import.meta.env.VITE_API_URL+"Customer/getByCI",{ params: {CI:CI} }).then((response) => {
+            this.customers=response.data.value;
+            //console.log(response.data.value);
             this.$emit("setDatachild_filter")
           }).catch((error) =>{
-            console.log(error.response.value)
+            console.log(error.response)
           });
         }
       }

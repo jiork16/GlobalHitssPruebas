@@ -25,42 +25,7 @@ export default {
     //this.getListCategory();
   },
   methods: {
-    setDatainput(data) {
-      console.log(data)
-      this.form.id=data.id
-      this.form.code=data.code
-      this.form.name=data.name
-      this.form.category_id=data.category_id
-      this.selected= data.category_id
-      console.log(this.selected)
-    },
-    cleanData(){
-      this.form.code=null
-      this.form.name=null
-      this.form.category_id=0
-      this.getListCategory();
-      this.selected=0
-    },
-    saveProduct(){
-      if (this.form.code === null || (this.form.code).length==0 ) {
-        alert("Ingrese Codigo")
-        return
-      }
-      if (this.form.name === null || (this.form.name).length==0 ) {
-        alert("Ingrese Nombre")
-        return
-      }
-      if (this.selected==0 ) {
-        alert("Seleccione Categoria")
-        return
-      }
-      if (this.form.id===null || this.form.id===0) {
-        this.postSaveProduct();
-      }else{
-        this.updateModifyProduct();
-        this.form.id=null
-      }
-    }
+
   }
 }
 </script>

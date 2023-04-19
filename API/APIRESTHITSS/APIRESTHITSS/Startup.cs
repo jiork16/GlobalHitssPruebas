@@ -69,7 +69,7 @@ namespace APIRESTHITSS
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseCors(cor => cor.AllowAnyHeader().WithOrigins("http://localhost:5173/", "http://localhost:5173", "http://localhost:/*", "http://localhost:5173", "http://localhost:8082/", "http://localhost:8082", "http://localhost:8086/", "http://localhost:8086"));
+            app.UseCors(cor => cor.AllowAnyHeader().WithOrigins("http://localhost:5173/", "http://localhost:5173", "https://localhost:44320", "https://localhost:44320/", "http://localhost:8082/", "http://localhost:8082", "http://127.0.0.1:5173", "http://127.0.0.1:5173/"));
 
             app.UseEndpoints(endpoints =>
             {
