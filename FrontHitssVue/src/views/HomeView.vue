@@ -20,12 +20,7 @@ export default {
     form: {
       CI  :     null
     }
-  }),
-  created() {
-},
-  methods: {
-
-  }
+  })
 }
 </script>
 

@@ -16,30 +16,12 @@ namespace APIRESTHITSS.Repositories
         {
             _dbContext = dbContext;
         }
-
         public IQueryable<T> Entities => _dbContext.Set<T>();
-
-        public async Task<T> AddAsync(T entity)
-        {
-            await _dbContext.Set<T>().AddAsync(entity);
-            return entity;
-        }
-
-        public Task DeleteAsync(T entity)
-        {
-            _dbContext.Set<T>().Remove(entity);
-            return Task.CompletedTask;
-        }
-
         public async Task<List<T>> GetAllAsync()
         {
             return await _dbContext
                 .Set<T>()
                 .ToListAsync();
-        }
-        public async Task<T> GetByIdAsync(int id)
-        {
-            return await _dbContext.Set<T>().FindAsync(id);
         }
         public async Task<List<T>> GetPagedReponseAsync(int pageNumber, int pageSize)
         {
@@ -49,11 +31,6 @@ namespace APIRESTHITSS.Repositories
                 .Take(pageSize)
                 .AsNoTracking()
                 .ToListAsync();
-        }
-        public Task UpdateAsync(T entity)
-        {
-            _dbContext.Entry(entity).CurrentValues.SetValues(entity);
-            return Task.CompletedTask;
         }
     }
 }

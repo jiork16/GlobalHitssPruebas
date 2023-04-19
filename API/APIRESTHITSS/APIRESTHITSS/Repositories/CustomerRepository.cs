@@ -10,24 +10,13 @@ namespace APIRESTHITSS.Repositories
     public class CustomerRepository:ICustomerRespository
     {        
         private readonly IRepositoryAsync<Customer> _repository;
-        private readonly GLOBALHITSSContext _dbContext;
-        public CustomerRepository(GLOBALHITSSContext dbContext, IRepositoryAsync<Customer> repository)
+        public CustomerRepository( IRepositoryAsync<Customer> repository)
         {
             _repository = repository;
-            _dbContext = dbContext;
-        }
-        public async Task<int> InsertAsync(Customer customer)
-        {
-            await _repository.AddAsync(customer);
-            return customer.Id;
-        }
-        public async Task UpdateAsync(Customer customer)
-        {
-            await _repository.UpdateAsync(customer);
         }
         public async Task<List<Customer>> GetByCIAsync(string ciCustomer)
         {
-            return await _dbContext.Customers.Where(p => p.Ci.StartsWith(ciCustomer)).ToListAsync();
+            return await _repository.Entities.Where(p => p.Ci.StartsWith(ciCustomer)).ToListAsync();
         }
         public async Task<List<Customer>> GetListAsync()
         {

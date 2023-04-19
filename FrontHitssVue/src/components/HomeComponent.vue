@@ -1,6 +1,7 @@
 <template>
   <div class="table-responsive">
     <table class="table table-hover">
+      <caption>Clientes de la BD</caption>
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>

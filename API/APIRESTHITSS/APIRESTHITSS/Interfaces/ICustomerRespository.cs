@@ -6,8 +6,6 @@ namespace APIRESTHITSS.Interfaces
 {
     public interface ICustomerRespository
     {
-        Task<int> InsertAsync(Customer customer);
-        Task UpdateAsync(Customer customer);
         Task<List<Customer>> GetByCIAsync(string ciCustomer);
         Task<List<Customer>> GetListAsync();
     }
