@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>APIRESTHITSS</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>dc948244-bf0f-4c70-b79e-4e5b93591ff2</ProjectGuid>
+  <FullPath>E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\APIRESTHITSS.csproj</FullPath>
+  <IsExcluded>true</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\.sonarqube\conf\0\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings />
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>net5.0</TargetFramework>
+</ProjectInfo>

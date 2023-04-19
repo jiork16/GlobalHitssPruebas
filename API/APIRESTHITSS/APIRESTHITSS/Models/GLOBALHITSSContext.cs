@@ -13,12 +13,6 @@ namespace APIRESTHITSS.Models
         {
             _connectionStrings = connectionStrings;
         }
-        protected GLOBALHITSSContext(DbContextOptions contextOptions,string connectionStrings)
-        : base(contextOptions)
-        {
-            _connectionStrings = connectionStrings;
-        }
-
         public GLOBALHITSSContext(DbContextOptions<GLOBALHITSSContext> options, string connectionStrings)
             : base(options)
         {

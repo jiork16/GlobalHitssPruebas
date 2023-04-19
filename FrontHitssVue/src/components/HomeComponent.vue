@@ -78,8 +78,6 @@
         getListcustomers() {
           axiosInstance.get(import.meta.env.VITE_API_URL+"Customer").then((response) => {
             this.customers=response.data.value;
-            //console.log(this.customers);
-            //console.log(response.data.value);
           }).catch((error) =>{
             console.log(error.response)
 
@@ -88,7 +86,6 @@
         getListcustomersFilter(CI) {
           axiosInstance.get(import.meta.env.VITE_API_URL+"Customer/getByCI",{ params: {CI:CI} }).then((response) => {
             this.customers=response.data.value;
-            //console.log(response.data.value);
             this.$emit("setDatachild_filter")
           }).catch((error) =>{
             console.log(error.response)

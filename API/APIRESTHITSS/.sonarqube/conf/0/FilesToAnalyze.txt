@@ -1,0 +1,16 @@
+﻿E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Controllers\CustomerController.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Extensions\ServiceCollectionExtensions.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Interfaces\ICustomerRespository.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Interfaces\IRepositoryAsync.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Models\Customer.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Models\GLOBALHITSSContext.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Program.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Repositories\CustomerRepository.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Repositories\RepositoryAsync.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Startup.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\obj\Debug\net5.0\APIRESTHITSS.AssemblyInfo.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\obj\Debug\net5.0\APIRESTHITSS.MvcApplicationPartsAssemblyInfo.cs
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\appsettings.Development.json
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\appsettings.json
+E:\JORO\Personales\VisualStudio\GlobalHitss\API\APIRESTHITSS\APIRESTHITSS\Properties\launchSettings.json

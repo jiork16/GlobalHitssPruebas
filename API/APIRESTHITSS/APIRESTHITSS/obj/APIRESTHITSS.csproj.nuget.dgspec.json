@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pruebas\\GlobalHitssPruebas\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj": {}
+    "E:\\JORO\\Personales\\VisualStudio\\GlobalHitss\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj": {}
   },
   "projects": {
-    "C:\\Pruebas\\GlobalHitssPruebas\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj": {
+    "E:\\JORO\\Personales\\VisualStudio\\GlobalHitss\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pruebas\\GlobalHitssPruebas\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj",
+        "projectUniqueName": "E:\\JORO\\Personales\\VisualStudio\\GlobalHitss\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj",
         "projectName": "APIRESTHITSS",
-        "projectPath": "C:\\Pruebas\\GlobalHitssPruebas\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Pruebas\\GlobalHitssPruebas\\API\\APIRESTHITSS\\APIRESTHITSS\\obj\\",
+        "projectPath": "E:\\JORO\\Personales\\VisualStudio\\GlobalHitss\\API\\APIRESTHITSS\\APIRESTHITSS\\APIRESTHITSS.csproj",
+        "packagesPath": "C:\\Users\\joro.ROMERODYA\\.nuget\\packages\\",
+        "outputPath": "E:\\JORO\\Personales\\VisualStudio\\GlobalHitss\\API\\APIRESTHITSS\\APIRESTHITSS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joro.ROMERODYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,6 +60,12 @@
               "target": "Package",
               "version": "[5.0.6, )"
             },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.56.0.67649, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -65,8 +77,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -78,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }

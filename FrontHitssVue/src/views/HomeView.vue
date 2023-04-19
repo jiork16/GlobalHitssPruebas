@@ -22,8 +22,7 @@ export default {
     }
   }),
   created() {
-    //this.getListCategory();
-  },
+},
   methods: {
 
   }

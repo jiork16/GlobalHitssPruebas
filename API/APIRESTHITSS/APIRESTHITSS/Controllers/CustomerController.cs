@@ -22,17 +22,17 @@ namespace APIRESTHITSS.Controllers
         public async Task<IActionResult> Get()
         {
             var customers =  await _customerRespository.GetListAsync();
-            return StatusCode(customers == null ? StatusCodes.Status204NoContent :
-                   customers.Count == 0 ? StatusCodes.Status204NoContent : StatusCodes.Status200OK,
-                   new { value = customers == null ? null : customers });
+
+            return StatusCode(customers != null ? StatusCodes.Status200OK : StatusCodes.Status204NoContent,
+                new { value = customers == null ? null : customers } );
         }
         [HttpGet("getByCI")]
         public async Task<IActionResult> GetByCI(string CI)
         {
             var customers = await _customerRespository.GetByCIAsync(CI);
-            return StatusCode(customers == null ? StatusCodes.Status204NoContent :
-                customers.Count==0? StatusCodes.Status204NoContent: StatusCodes.Status200OK,
+            return StatusCode(customers != null ? StatusCodes.Status200OK : StatusCodes.Status204NoContent,
                 new { value = customers == null ? null : customers });
+
             //https://morioh.com/p/e5a235c363c9
             //https://www.youtube.com/watch?v=o6iqoPDr-nw&t=234s&ab_channel=hdeleon.net
         }
