@@ -1,32 +1,35 @@
 <template>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">CI</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellido</th>
-        <th scope="col">Fecha Nacimiento</th>
-        <th scope="col">Direccion</th>
-        <th scope="col">Email</th>
-        <th scope="col">Telefono</th>
-      </tr>
-    </thead>
-    <tbody>
-      <template v-for="item in customers" :key="item.id">
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead class="thead-dark">
         <tr>
-          <th scope="row">{{ item.Id }}</th>
-          <td>{{ item.ci }}</td>
-          <td>{{ item.firstName }}</td>
-          <td>{{ item.lastName }}</td>
-          <td>{{ format_date(item.dateBirth)  }}</td>
-          <td>{{ item.homeAdress }}</td>
-          <td>{{ item.email }}</td>
-          <td>{{ item.phoneNumer }}</td>
+          <th scope="col">#</th>
+          <th scope="col">CI</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Fecha Nacimiento</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telefono</th>
         </tr>
-      </template>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <template v-for="item in customers" :key="item.id">
+          <tr>
+            <th scope="row">{{ item.Id }}</th>
+            <td>{{ item.ci }}</td>
+            <td>{{ item.firstName }}</td>
+            <td>{{ item.lastName }}</td>
+            <td>{{ format_date(item.dateBirth)  }}</td>
+            <td>{{ item.homeAdress }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phoneNumer }}</td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </div>
+
   </template>
   
   <script >
